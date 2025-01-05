@@ -32,15 +32,15 @@ A desktop application built using **Electron**, **React**, and **Three.js** to v
    git clone https://github.com/yourusername/3d-viewer-app.git
    cd 3d-viewer-app
    ```
-2. Install dependencies 
+2. Install dependencies:
   ```bash
    npm install
   ```
-3. For development run
+3. For development run:
   ```bash
    npm run dev
   ```
-4. For build
+4. For build:
   ```bash
    npm run build
   ```
