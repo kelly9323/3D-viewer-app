@@ -1,0 +1,59 @@
+:root{
+  --primary-bg-color: #292929;
+  --secondary-bg-color:#bd00ff;
+  --primary-btn-bg: linear-gradient(to right, #e066ff, #a100e6);
+  --secondary-btn-color: #a100e6;
+  --primary-content-color:#FDDA0D;
+  color:#fefefe;
+  font-size: 16px;
+  font-family: "Roboto Condensed", serif;
+}
+
+body{
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.overlay {
+  pointer-events: none;
+}
+.viewer-container {
+  position: relative;
+  height: 100%;
+}
+.viewer-container.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #4d0099be;
+  z-index: 2;
+}
+.uploader-container {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  margin-top: 12px;
+}
+.uploader-main {
+  text-align: center;
+  width: 95%;
+  height: 89%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0px 8px 24px 1px rgba(0, 0, 0, 0.46);
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border: 2px solid var(--secondary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uploader-main:hover{
+  background-color: rgba(128, 128, 128, 0.425);
+}
+

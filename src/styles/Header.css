@@ -1,0 +1,63 @@
+.header-container {
+  background-color: var(--primary-bg-color);
+  min-height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 999;
+  position: relative;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 12%;
+}
+
+.logo {
+  max-width: 117px;
+  max-height: 52px;
+}
+
+.app-name {
+  font-size: inherit;
+  margin-left: 5px;
+}
+
+.import-btn-container {
+  margin-right: 5px;
+}
+
+.import-btn {
+  display: flex;
+}
+
+.import-btn:hover {
+  cursor: pointer;
+}
+
+.import-btn:hover .import-btn-txt {
+    color: var(--secondary-bg-color)
+  }
+
+.import-icon {
+  width: 30px;
+  height: 30px;
+  background: var(--primary-btn-bg);
+  border: none;
+  color: inherit;
+  border-radius: 4px;
+  font-size: inherit;
+  font-weight: 600;
+  align-self: center;
+}
+
+.import-btn-txt {
+  margin-left: 3px;
+  font-weight: 500;
+}
+
+.import-btn-txt:hover {
+  cursor: pointer;
+  color:  #ee7e16;
+}

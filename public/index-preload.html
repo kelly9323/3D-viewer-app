@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loading</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #292929;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      color: #fff;
+      font-family: Arial, sans-serif;
+    }
+    img {
+      max-width: 150px;
+      max-height: 150px;
+      margin-bottom: 20px;
+    }
+    .spinner-splash {
+      border: 4px solid rgba(255, 255, 255, 0.2); 
+      border-top: 4px solid #ffffff; 
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="main-logo.png" alt="Loading..." />
+  <div class="spinner-splash"></div>
+</body>
+</html>

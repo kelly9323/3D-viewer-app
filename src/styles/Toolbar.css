@@ -1,0 +1,177 @@
+.toolbar-container {
+  width: 22%;
+  color: black;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: -250px;
+  height: 100%;
+  background-color: #1d1c24cf;
+  color: inherit;
+  padding: 13px;
+  box-sizing: border-box;
+  transition: left 0.3s ease-in-out;
+  padding-top: 4rem;
+  overflow-y: auto;
+  box-shadow: 0px 8px 24px 1px rgba(0, 0, 0, 0.46);
+}
+
+.toolbar-container.toolbar-open {
+  left: 0;
+}
+.toolbar-toggle-btn {
+  position: fixed;
+  top: 7.7%;
+  left: 0;
+  padding: 0;
+  background: var(--primary-btn-bg);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  transition: left 0.3s ease-in-out;
+}
+
+.toolbar-toggle-btn:hover {
+  background-color: var(--primary-btn-bg);
+}
+
+.chevron-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.toolbar-toggle-btn.toggle-active {
+  left: 22%;
+}
+
+/* CHECKBOX */
+.toolbar-checkbox-wrapper{
+  margin-bottom: 12px;
+}
+
+.toolbar-checkbox-wrapper input[type="checkbox"] {
+  visibility: hidden;
+  display: none;
+}
+
+.toolbar-cb-container{
+  display: flex;
+}
+
+.toolbar-checkbox-wrapper *,
+.toolbar-checkbox-wrapper ::after,
+.toolbar-checkbox-wrapper ::before {
+  box-sizing: border-box;
+}
+
+.toolbar-checkbox-wrapper .toolbar-switch {
+  font-size: 13px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+}
+
+.toolbar-checkbox-wrapper .toolbar-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toolbar-checkbox-wrapper .toolbar-slider-btn {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border: 1px solid #adb5bd;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.toolbar-checkbox-wrapper .toolbar-slider-btn:before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  border-radius: 20px;
+  left: 0.27em;
+  bottom: 0.25em;
+  background-color: #adb5bd;
+  transition: 0.4s;
+}
+
+.toolbar-checkbox-wrapper input:checked + .toolbar-slider-btn {
+  background-color: var(--primary-content-color);
+  border: 1px solid var(--primary-content-color);;
+}
+
+.toolbar-checkbox-wrapper input:focus + .toolbar-slider-btn {
+  box-shadow: 0 0 1px var(--primary-content-color);;
+}
+
+.toolbar-checkbox-wrapper input:checked + .toolbar-slider-btn:before {
+  transform: translateX(1.4em);
+  background-color: #fff;
+}
+
+.tb-switch-label{
+  display: block;
+  align-self: center;
+  margin-left: 7px;
+}
+
+/* METADATA */
+.model-metadata-table {
+  width: 100%;
+  border-collapse: separate; 
+  border-spacing: 0; 
+  border-radius: 9px; 
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.model-metadata-table td {
+  padding: 10px;
+}
+
+.model-metadata-table tr:nth-child(odd) {
+  background-color: #4c4a4a;
+}
+
+.model-metadata-table tr:nth-child(even) {
+  background-color: var(--secondary-btn-color);
+}
+/* style default controls gui  */
+.lil-gui.root {
+  width: inherit !important;
+}
+
+/* SCROLL BAR */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4f2487;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3e1f74;
+}
+
+::-webkit-scrollbar-corner {
+  background: #f1f1f1;
+}

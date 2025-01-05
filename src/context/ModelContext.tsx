@@ -8,16 +8,23 @@ interface ModelContextProps {
   showWireframe: boolean | undefined;
   showAxesHelper: boolean | undefined;
   modelMetadata: Record<string, any> | null;
-  localPlane: THREE.Plane | null;
-  globalPlane: THREE.Plane | null;
+  showGrid: boolean | undefined;
+  showClippingPlane: boolean | undefined;
+  model: THREE.Object3D | null;
+  scene: THREE.Scene | null;
+  loading: boolean;
+  
 
   setModelUrl: (url: string | null) => void;
   setFileExtension: (extension: string | null) => void;
   setShowWireframe: (value: boolean) => void;
   setShowAxesHelper: (value: boolean) => void;
   setModelMetadata: (value: Record<string, any>) => void;
-  setLocalPlane: (plane: THREE.Plane) => void;
-  setGlobalPlane: (plane: THREE.Plane) => void;
+  setShowGrid: (value: boolean) => void;
+  setShowClippingPlane: (value: boolean) => void;
+  setModel: (model: THREE.Object3D | null) => void;
+  setScene: (scene: THREE.Scene | null) => void;
+  setLoading: (state: boolean) => void;
 }
 
 const ModelContext = createContext<ModelContextProps | undefined>(undefined);
@@ -29,9 +36,16 @@ export const ModelProvider: React.FC<{ children: React.ReactNode }> = ({
   const [fileExtension, setFileExtension] = useState<string | null>(null);
   const [showWireframe, setShowWireframe] = useState<boolean>(false);
   const [showAxesHelper, setShowAxesHelper] = useState<boolean>(false);
-  const [modelMetadata, setModelMetadata] = useState<Record<string, any> | null>(null);
-  const [localPlane, setLocalPlane] = useState<THREE.Plane | null>(null);
-  const [globalPlane, setGlobalPlane] = useState<THREE.Plane | null>(null);
+  const [modelMetadata, setModelMetadata] = useState<Record<
+    string,
+    any
+  > | null>(null);
+  const [showGrid, setShowGrid] = useState<boolean>(true);
+  const [showClippingPlane, setShowClippingPlane] = useState<boolean>(false);
+  const [model, setModel] = useState<THREE.Object3D | null>(null);
+  const [scene, setScene] = useState<THREE.Scene | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+
   //makes state available for children wrapped inside
   return (
     <ModelContext.Provider
@@ -46,10 +60,16 @@ export const ModelProvider: React.FC<{ children: React.ReactNode }> = ({
         setShowAxesHelper,
         modelMetadata,
         setModelMetadata,
-        localPlane,
-        globalPlane,
-        setLocalPlane,
-        setGlobalPlane,
+        showGrid,
+        setShowGrid,
+        showClippingPlane,
+        setShowClippingPlane,
+        model,
+        setModel,
+        scene,
+        setScene,
+        loading,
+        setLoading,
       }}
     >
       {children}

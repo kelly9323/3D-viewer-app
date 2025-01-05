@@ -1,0 +1,16 @@
+#nprogress .spinner {
+  display: none;
+}
+
+#nprogress .bar {
+  background: #E1BC29;
+  height: 10px; 
+}
+
+#nprogress .peg {
+  display: none;
+}
+
+.app-name{
+    text-align: center;
+}

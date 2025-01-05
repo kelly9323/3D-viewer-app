@@ -1,7 +1,7 @@
 {
   "name": "3d-viewer-app",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,11 +10,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nprogress": "^0.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "three": "^0.171.0"
   },
   "devDependencies": {
+    "@types/nprogress": "^0.2.3",
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@types/three": "^0.170.0",
