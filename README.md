@@ -34,4 +34,16 @@ A desktop application built using **Electron**, **React**, and **Three.js** to v
 2. Install dependencies 
   ```bash
    npm install
-3.
+3. For development run
+  ```bash
+   npm run dev
+4. For build
+  ```bash
+   npm run build
+
+# Running the 3D Viewer App After Build
+
+After building the 3D Viewer app, you can run it on Windows:
+
+1. Navigate to the `/release` folder
+2. Launch `.exe` file and install it for your PC.
