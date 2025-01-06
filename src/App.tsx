@@ -2,7 +2,6 @@ import "./App.css";
 import MainImport from "./components/layout/MainImport";
 import Viewer from "./components/viewer/Viewer";
 import { ModelProvider, useModelContext } from "./context/ModelContext";
-import { useLoadingState } from "./hooks/useLoadingState";
 import ToolBar from "./components/layout/ToolBar";
 import Header from "./components/layout/Header";
 import LoadingOverlay from "./components/LoadingOverlay";
