@@ -40,7 +40,7 @@ const ClippingPlane: React.FC<ClippingPlaneProps> = ({
     boundingBox.getSize(size);
     // set planes at the edges of model's bounding box
     planes[0].constant = boundingBox.max.x;
-    planes[1].constant = boundingBox.max.y;
+    // planes[1].constant = boundingBox.max.y;
     planes[2].constant = boundingBox.max.z;
 
     const planeHelpers = planes.map((plane) => {
