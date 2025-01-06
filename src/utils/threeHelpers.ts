@@ -151,22 +151,22 @@ export const adjustModelPosition = (model: THREE.Object3D) => {
   );
 };
 
-export const clearModel = (
-  model: THREE.Object3D | null,
-  scene: THREE.Scene | null,
-) => {
-  if (model && scene) {
-    scene.remove(model);
-    // clean memory to improve performance
-    if (model instanceof THREE.Mesh) {
-      model.geometry.dispose();
-      if (model.material) {
-        if (Array.isArray(model.material)) {
-          model.material.forEach((material) => material.dispose());
-        } else {
-          model.material.dispose();
-        }
-      }
-    }
-  }
-};
+// export const clearModel = (
+//   model: THREE.Object3D | null,
+//   scene: THREE.Scene | null,
+// ) => {
+//   if (model && scene) {
+//     scene.remove(model);
+//     // clean memory to improve performance
+//     if (model instanceof THREE.Mesh) {
+//       model.geometry.dispose();
+//       if (model.material) {
+//         if (Array.isArray(model.material)) {
+//           model.material.forEach((material) => material.dispose());
+//         } else {
+//           model.material.dispose();
+//         }
+//       }
+//     }
+//   }
+// };

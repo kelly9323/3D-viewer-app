@@ -1,16 +1,9 @@
 import "../../styles/Header.css";
 import importIcon from "../../assets/icons/import-icon.png";
-import { useModelContext } from "../../context/ModelContext";
-import { clearModel } from "../../utils/threeHelpers";
 
 const Header: React.FC = () => {
-  const { model, scene, setModelUrl, setModel } = useModelContext();
-
   const handleImportClick = () => {
-    clearModel(model, scene);
-    setModelUrl(null);
-    setModel(null);
-
+      window.location.reload();
   };
   return (
     <>
