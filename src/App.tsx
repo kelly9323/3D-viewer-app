@@ -8,7 +8,6 @@ import Header from "./components/layout/Header";
 import LoadingOverlay from "./components/LoadingOverlay";
 
 function AppContent() {
-  const isLoading = useLoadingState(2000);
   const { modelUrl, loading } = useModelContext();
 
   return (
@@ -16,7 +15,6 @@ function AppContent() {
       {loading && <LoadingOverlay />}
       <div className="wrapper-main">
         <Header />
-        {!isLoading && (
           <div>
             {!modelUrl && (
               <div className="uploader-container">
@@ -30,7 +28,6 @@ function AppContent() {
               <Viewer />
             </div>
           </div>
-        )}
       </div>
     </>
   );
